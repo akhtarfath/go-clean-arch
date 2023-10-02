@@ -1,0 +1,33 @@
+{
+  "debug": true,
+  "server": {
+    "address": ":9090"
+  },
+  "context": {
+    "timeout": 3
+  },
+  "database": {
+    "driver": {
+      "mysql": {
+        "host": "localhost",
+        "port": "3306",
+        "user": "user",
+        "pass": "password",
+        "name": "article"
+      },
+      "pgsql": {
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "pass": "password",
+        "name": "article"
+      }
+    },
+    "pool": {
+      "max": {
+        "idle": 10,
+        "open": 100
+      }
+    }
+  }
+}
