@@ -7,4 +7,3 @@ _*
 engine
 bin/
 *.out
-config.json
