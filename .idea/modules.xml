@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/uhamka-api.iml" filepath="$PROJECT_DIR$/.idea/uhamka-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/go-clean-arch.iml" filepath="$PROJECT_DIR$/.idea/go-clean-arch.iml" />
     </modules>
   </component>
 </project>
