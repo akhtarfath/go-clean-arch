@@ -1,0 +1,62 @@
+version: "3.7"
+services:
+  web:
+    image: uhamka-api
+    container_name: uhamka_webservice_api
+    ports:
+      - "9090:9090"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      pgsql:
+        condition: service_healthy
+    volumes:
+      - ./config.json:/app/config.json
+
+  mysql:
+    platform: linux/amd64
+    image: mysql:latest
+    restart: on-failure
+    container_name: uhamka_api_mysql
+    environment:
+      - MYSQL_ROOT_HOST=localhost
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=article
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    ports:
+      - "3306:3306"
+    networks:
+      - uhamka_api_network
+    volumes:
+      - ./init_data/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
+      - ./init_data/article.sql:/docker-entrypoint-initdb.d/init.sql
+    command: mysqld --user=root
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p", "password" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgsql:
+    platform: linux/arm64/v8
+    image: postgres:latest
+    restart: on-failure
+    container_name: uhamka_api_pgsql
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=article
+    ports:
+      - "5432:5432"
+    networks:
+      - uhamka_api_network
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres", "-d", "article", "-h", "localhost" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  uhamka_api_network:
+    driver: bridge
