@@ -55,7 +55,7 @@ Here is the steps to run it with `docker-compose`
 $ cd workspace
 
 # Clone into your workspace
-$ git clone https://github.com/bpti-uhamka/gol-clean-arch-api.git
+$ git clone https://github.com/akhtarfath/gol-clean-arch-api.git
 
 #move to project
 $ cd go-clean-arch
@@ -74,5 +74,5 @@ $ curl localhost:9090/articles
 In this project, I use some tools listed below. But you can use any simmilar library that have the same purposes. But,
 well, different library will have different implementation type. Just be creative and use anything that you really need.
 
-- All libraries listed in [`go.mod`](https://github.com/bpti-uhamka/gol-clean-arch-api/blob/master/go.mod)
+- All libraries listed in [`go.mod`](https://github.com/akhtarfath/gol-clean-arch-api/blob/master/go.mod)
 - ["github.com/vektra/mockery".](https://github.com/vektra/mockery) To Generate Mocks for testing needs.

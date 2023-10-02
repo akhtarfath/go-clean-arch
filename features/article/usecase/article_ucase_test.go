@@ -3,15 +3,15 @@ package usecase_test
 import (
 	"context"
 	"errors"
-	ucase "github.com/bpti-uhamka/gol-clean-arch-api/features/article/usecase"
+	ucase "github.com/akhtarfath/gol-clean-arch-api/features/article/usecase"
 	"testing"
 	"time"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/bpti-uhamka/gol-clean-arch-api/domain"
-	"github.com/bpti-uhamka/gol-clean-arch-api/domain/mocks"
+	"github.com/akhtarfath/gol-clean-arch-api/domain"
+	"github.com/akhtarfath/gol-clean-arch-api/domain/mocks"
 )
 
 func TestFetch(t *testing.T) {

@@ -1,4 +1,4 @@
-module github.com/bpti-uhamka/gol-clean-arch-api
+module github.com/akhtarfath/gol-clean-arch-api
 
 go 1.12
 

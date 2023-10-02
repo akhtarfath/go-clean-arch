@@ -2,15 +2,15 @@ package mysql_test
 
 import (
 	"context"
-	"github.com/bpti-uhamka/gol-clean-arch-api/features/article/repository"
-	articleMysqlRepo "github.com/bpti-uhamka/gol-clean-arch-api/features/article/repository/mysql"
+	"github.com/akhtarfath/gol-clean-arch-api/features/article/repository"
+	articleMysqlRepo "github.com/akhtarfath/gol-clean-arch-api/features/article/repository/mysql"
 	"testing"
 	"time"
 
 	"github.com/stretchr/testify/assert"
 	sqlmock "gopkg.in/DATA-DOG/go-sqlmock.v1"
 
-	"github.com/bpti-uhamka/gol-clean-arch-api/domain"
+	"github.com/akhtarfath/gol-clean-arch-api/domain"
 )
 
 func TestFetch(t *testing.T) {

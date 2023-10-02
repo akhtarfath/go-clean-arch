@@ -4,11 +4,11 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-	"github.com/bpti-uhamka/gol-clean-arch-api/features/article/repository"
+	"github.com/akhtarfath/gol-clean-arch-api/features/article/repository"
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/bpti-uhamka/gol-clean-arch-api/domain"
+	"github.com/akhtarfath/gol-clean-arch-api/domain"
 )
 
 type mysqlArticleRepository struct {

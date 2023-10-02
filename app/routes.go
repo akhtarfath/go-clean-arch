@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/bpti-uhamka/gol-clean-arch-api/app/databases"
-	_articleHttpDelivery "github.com/bpti-uhamka/gol-clean-arch-api/features/article/delivery/http"
-	_articleRepo "github.com/bpti-uhamka/gol-clean-arch-api/features/article/repository/mysql"
-	_articleUcase "github.com/bpti-uhamka/gol-clean-arch-api/features/article/usecase"
-	_authorRepo "github.com/bpti-uhamka/gol-clean-arch-api/features/author/repository/mysql"
+	"github.com/akhtarfath/gol-clean-arch-api/app/databases"
+	_articleHttpDelivery "github.com/akhtarfath/gol-clean-arch-api/features/article/delivery/http"
+	_articleRepo "github.com/akhtarfath/gol-clean-arch-api/features/article/repository/mysql"
+	_articleUcase "github.com/akhtarfath/gol-clean-arch-api/features/article/usecase"
+	_authorRepo "github.com/akhtarfath/gol-clean-arch-api/features/author/repository/mysql"
 	"github.com/labstack/echo"
 	"time"
 )
