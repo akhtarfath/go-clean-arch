@@ -1,7 +1,7 @@
 package middleware_test
 
 import (
-	"github.com/bpti-uhamka/uhamka-api/app/middleware"
+	"github.com/bpti-uhamka/gol-clean-arch-api/app/middleware"
 	"net/http"
 	test "net/http/httptest"
 	"testing"

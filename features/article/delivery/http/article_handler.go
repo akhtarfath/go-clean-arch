@@ -8,7 +8,7 @@ import (
 	"github.com/sirupsen/logrus"
 	validator "gopkg.in/go-playground/validator.v9"
 
-	"github.com/bpti-uhamka/uhamka-api/domain"
+	"github.com/bpti-uhamka/gol-clean-arch-api/domain"
 )
 
 // ResponseError represent the response error struct

@@ -4,7 +4,7 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/bpti-uhamka/uhamka-api/domain"
+	"github.com/bpti-uhamka/gol-clean-arch-api/domain"
 )
 
 type mysqlAuthorRepo struct {

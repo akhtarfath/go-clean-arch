@@ -1,7 +1,7 @@
 package main
 
 import (
-	_appMiddleware "github.com/bpti-uhamka/uhamka-api/app/middleware"
+	_appMiddleware "github.com/bpti-uhamka/gol-clean-arch-api/app/middleware"
 	"github.com/labstack/echo"
 )
 

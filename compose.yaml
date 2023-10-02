@@ -1,8 +1,8 @@
 version: "3.7"
 services:
   web:
-    image: uhamka-api
-    container_name: uhamka_webservice_api
+    image: gol-clean-arch-api
+    container_name: go_clean_arch_webservice_api
     ports:
       - "9090:9090"
     depends_on:
@@ -17,7 +17,7 @@ services:
     platform: linux/amd64
     image: mysql:latest
     restart: on-failure
-    container_name: uhamka_api_mysql
+    container_name: go_clean_arch_api_mysql
     environment:
       - MYSQL_ROOT_HOST=localhost
       - MYSQL_ROOT_PASSWORD=password
@@ -27,7 +27,7 @@ services:
     ports:
       - "3306:3306"
     networks:
-      - uhamka_api_network
+      - go_clean_arch_api_network
     volumes:
       - ./init_data/mysql.cnf:/etc/mysql/conf.d/mysql.cnf
       - ./init_data/article.sql:/docker-entrypoint-initdb.d/init.sql
@@ -42,7 +42,7 @@ services:
     platform: linux/arm64/v8
     image: postgres:latest
     restart: on-failure
-    container_name: uhamka_api_pgsql
+    container_name: go_clean_arch_api_pgsql
     environment:
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=postgres
@@ -50,7 +50,7 @@ services:
     ports:
       - "5432:5432"
     networks:
-      - uhamka_api_network
+      - go_clean_arch_api_network
     healthcheck:
       test: [ "CMD", "pg_isready", "-U", "postgres", "-d", "article", "-h", "localhost" ]
       interval: 10s
@@ -58,5 +58,5 @@ services:
       retries: 5
 
 networks:
-  uhamka_api_network:
+  go_clean_arch_api_network:
     driver: bridge

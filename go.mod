@@ -1,4 +1,4 @@
-module github.com/bpti-uhamka/uhamka-api
+module github.com/bpti-uhamka/gol-clean-arch-api
 
 go 1.12
 

@@ -7,7 +7,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/bpti-uhamka/uhamka-api/domain"
+	"github.com/bpti-uhamka/gol-clean-arch-api/domain"
 )
 
 type articleUseCase struct {

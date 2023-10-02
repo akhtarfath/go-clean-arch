@@ -2,7 +2,7 @@ package mysql_test
 
 import (
 	"context"
-	repository "github.com/bpti-uhamka/uhamka-api/features/author/repository/mysql"
+	repository "github.com/bpti-uhamka/gol-clean-arch-api/features/author/repository/mysql"
 	"github.com/stretchr/testify/assert"
 	"testing"
 	"time"

@@ -3,7 +3,7 @@ package http_test
 import (
 	"context"
 	"encoding/json"
-	articleHttp "github.com/bpti-uhamka/uhamka-api/features/article/delivery/http"
+	articleHttp "github.com/bpti-uhamka/gol-clean-arch-api/features/article/delivery/http"
 	"net/http"
 	"net/http/httptest"
 	"strconv"
@@ -17,8 +17,8 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/bpti-uhamka/uhamka-api/domain"
-	"github.com/bpti-uhamka/uhamka-api/domain/mocks"
+	"github.com/bpti-uhamka/gol-clean-arch-api/domain"
+	"github.com/bpti-uhamka/gol-clean-arch-api/domain/mocks"
 )
 
 func TestFetch(t *testing.T) {
